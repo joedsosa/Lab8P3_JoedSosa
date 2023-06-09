@@ -1,0 +1,9 @@
+Halcon Milenario,90,90,500000,Marte
+White House,50,50,500000,Marte
+FragataV,80,80,200000,Marte
+X-Wing,100,100,700000,Saturno
+Y-Wing,50,50,900000,Saturno
+Destroyer,100,100,400000,Saturno
+Xavineta,100,100,900000,Neptuno
+La_Ceja_De_Ancelloti,100,100,900000,Neptuno
+Falcon1,100,100,900000,Neptuno
