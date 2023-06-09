@@ -1,20 +1,46 @@
 #include "Rocket.h"
 
-Rocket::Rocket(const string& name, float leftWing, float rightWing, int fuelAmount)
-    : name(name), leftWing(leftWing), rightWing(rightWing), fuelAmount(fuelAmount) {}
+Rocket::Rocket(string& name, int fuelAmount, int leftWing, int rightWing, const string& destinationPlanet)
+    : name(name), fuelAmount(fuelAmount), leftWing(leftWing), rightWing(rightWing), destinationPlanet(destinationPlanet) {}
 
-const string& Rocket::getName() const {
+// Getters
+string Rocket::getName(){
     return name;
 }
 
-float Rocket::getLeftWing() const {
+int Rocket::getFuelAmount(){
+    return fuelAmount;
+}
+
+int Rocket::getLeftWing(){
     return leftWing;
 }
 
-float Rocket::getRightWing() const {
+int Rocket::getRightWing(){
     return rightWing;
 }
 
-int Rocket::getFuelAmount() const {
-    return fuelAmount;
+std::string Rocket::getDestinationPlanet(){
+    return destinationPlanet;
+}
+
+// Setters
+void Rocket::setName(string& name) {
+    this->name = name;
+}
+
+void Rocket::setFuelAmount(int fuelAmount) {
+    this->fuelAmount = fuelAmount;
+}
+
+void Rocket::setLeftWing(int leftWing) {
+    this->leftWing = leftWing;
+}
+
+void Rocket::setRightWing(int rightWing) {
+    this->rightWing = rightWing;
+}
+
+void Rocket::setDestinationPlanet(string& destinationPlanet) {
+    this->destinationPlanet = destinationPlanet;
 }

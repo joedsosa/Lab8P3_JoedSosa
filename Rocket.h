@@ -3,22 +3,31 @@
 
 #include <string>
 #include <iostream>
-#include <string>
 using namespace std;
 class Rocket {
-public:
-    Rocket(const string& name, float leftWing, float rightWing, int fuelAmount);
-
-    const string& getName() const;
-    float getLeftWing() const;
-    float getRightWing() const;
-    int getFuelAmount() const;
-
 private:
     string name;
-    float leftWing;
-    float rightWing;
     int fuelAmount;
+    int leftWing;
+    int rightWing;
+    string destinationPlanet;
+
+public:
+    Rocket(string& name, int fuelAmount, int leftWing = 100, int rightWing = 100, const string& destinationPlanet = "");
+
+    // Getters
+    string getName();
+    int getFuelAmount();
+    int getLeftWing();
+    int getRightWing();
+    string getDestinationPlanet();
+
+    // Setters
+    void setName(string& name);
+    void setFuelAmount(int fuelAmount);
+    void setLeftWing(int leftWing);
+    void setRightWing(int rightWing);
+    void setDestinationPlanet(string& destinationPlanet);
 };
 
 #endif  // ROCKET_H

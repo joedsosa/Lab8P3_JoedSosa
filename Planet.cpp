@@ -1,16 +1,16 @@
 #include "Planet.h"
 
-Planet::Planet(const std::string& name, int fuelRequired, int asteroidProbability)
+Planet::Planet(string& name, int fuelRequired, int asteroidProbability)
     : name(name), fuelRequired(fuelRequired), asteroidProbability(asteroidProbability) {}
 
-const std::string& Planet::getName() const {
+string& Planet::getName(){
     return name;
 }
 
-int Planet::getFuelRequired() const {
+int Planet::getFuelRequired(){
     return fuelRequired;
 }
 
-int Planet::getAsteroidProbability() const {
+int Planet::getAsteroidProbability(){
     return asteroidProbability;
 }

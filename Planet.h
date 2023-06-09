@@ -6,12 +6,12 @@
 using namespace std;
 class Planet {
 public:
-    Planet(const string& name, int fuelRequired, int asteroidProbability);
+    Planet(string& name, int fuelRequired, int asteroidProbability);
 
-    const string& getName() const;
-    int getFuelRequired() const;
-    int getAsteroidProbability() const;
-
+    string& getName();
+    int getFuelRequired();
+    int getAsteroidProbability();
+    
 private:
     string name;
     int fuelRequired;
