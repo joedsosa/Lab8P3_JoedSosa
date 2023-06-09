@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <cstdlib>
 #include <ctime>
@@ -70,18 +71,52 @@ void deleteLog() {
             cout << "Salir" << endl;
         
 }
-void readFile(vector<Rocket>& rockets, vector<Planet>& planets) {
+//void readFile(vector<Rocket>& rockets, vector<Planet>& planets) {
+//            ifstream inputFile("spaceZ.txt");
+//            if (inputFile.is_open()) {
+//                string line;
+//                while (getline(inputFile, line)) {
+//                    string name;
+//                    float leftWing, rightWing;
+//                    int fuelAmount;
+//                    string planetName;
+//                    sscanf(line.c_str(), "%s,%f,%f,%d,%s", name.c_str(), &leftWing, &rightWing, &fuelAmount, planetName.c_str());
+//                    rockets.push_back(Rocket(name, leftWing, rightWing, fuelAmount));
+//                    planets.push_back(Planet(planetName, 0, 0));
+//                }
+//                inputFile.close();
+//            }
+//            else {
+//                cout << "Error al abrir el archivo de datos. " << endl;
+//            }
+//        }
+        vector<string> split(const string& line, char delimiter) {
+            vector<string> tokens;
+            string token;
+            istringstream tokenStream(line);
+            while (getline(tokenStream, token, delimiter)) {
+                tokens.push_back(token);
+            }
+            return tokens;
+}
+        void readFile(vector <Rocket>& rockets, vector<Planet>& planets) {
             ifstream inputFile("spaceZ.txt");
             if (inputFile.is_open()) {
                 string line;
                 while (getline(inputFile, line)) {
-                    string name;
-                    float leftWing, rightWing;
-                    int fuelAmount;
-                    string planetName;
-                    sscanf(line.c_str(), "%s,%f,%f,%d,%s", name.c_str(), &leftWing, &rightWing, &fuelAmount, planetName.c_str());
-                    rockets.push_back(Rocket(name, leftWing, rightWing, fuelAmount));
-                    planets.push_back(Planet(planetName, 0, 0));
+                    vector<string> data = split(line, ',');
+                    if (data.size() == 5) {
+                        string name = data[0];
+                        float leftWing = stof(data[1]);
+                        float rightWing = stof(data[2]);
+                        int fuelAmount = stoi(data[3]);
+                        string planetName = data[4];
+                        rockets.push_back(Rocket(name, leftWing, rightWing, fuelAmount));
+                        planets.push_back(Planet(planetName, 0, 0));
+                    }
+                    else {
+                        cout << "Error: linea con formato incorrecto: " << line << endl;
+                    }
                 }
                 inputFile.close();
             }

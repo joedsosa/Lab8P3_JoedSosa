@@ -1,17 +1,2 @@
-﻿  Lab8P3_JoedSosa.cpp
-C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\Lab8P3_JoedSosa.cpp(82,42): warning C4477: 'sscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const _Elem *'
-          with
-          [
-              _Elem=char
-          ]
-C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\Lab8P3_JoedSosa.cpp(82,42): warning C4477: 'sscanf' : format string '%s' requires an argument of type 'char *', but variadic argument 5 has type 'const _Elem *'
-          with
-          [
-              _Elem=char
-          ]
-C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\Lab8P3_JoedSosa.cpp(82,21): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Planet.cpp
-  Rocket.cpp
-C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\Rocket.cpp(9,23): error C2084: function 'const std::string &Rocket::getName(void) const' already has a body
-C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\Rocket.cpp(6,23): message : see previous definition of 'getName'
-  Generating Code...
+﻿  Rocket.cpp
+  Lab8P3_JoedSosa.vcxproj -> C:\Users\joeds\OneDrive\Escritorio\Lab8P3_JoedSosa\x64\Debug\Lab8P3_JoedSosa.exe

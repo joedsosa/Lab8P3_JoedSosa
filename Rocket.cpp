@@ -6,9 +6,6 @@ Rocket::Rocket(const string& name, float leftWing, float rightWing, int fuelAmou
 const string& Rocket::getName() const {
     return name;
 }
-const string& Rocket::getName() const {
-    return name;
-}
 
 float Rocket::getLeftWing() const {
     return leftWing;
